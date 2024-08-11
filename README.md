@@ -24,7 +24,7 @@ Output Layer: 10 neurons gets 64 inputs, with SoftMax activaton function
 ## Emphasis on Adam Optimizier
 The previous optimizer used for the NNFS repository was SGD. The issue with using SGD was the slow learning process and high computational requirements. Switching to Adam (Adaptive Moment Estimation) has made the process faster and lighter in terms of resource consumption. This optimizer operates based on the concept of velocity, adaptively adjusting the step size to find the local minima.
 
-\begin{align*}
+``` \begin{align*}
 \text{Compute the biased first moment estimate } m_{t} \\
 m_{t} &= \beta_{1} \cdot m_{t-1} + (1 - \beta_{1}) \cdot g_{t} \\
 \text{where } g_{t} \text{ is the gradient at time step } t. \\
@@ -36,7 +36,7 @@ v_{t} &= \beta_{2} \cdot v_{t-1} + (1 - \beta_{2}) \cdot g_{t}^{2} \\
 m_{t} &= \beta_{1} \cdot m_{t-1} + (1 - \beta_{1}) \cdot g_{t} \\
 \text{Update the parameters } \theta \\
 \theta_{t} &= \theta_{t-1} - \frac{a \cdot \hat{v}_{t}}{\sqrt{\hat{m}_{t} + \epsilon}}
-\end{align*}
+\end{align*} ```
 
 ## Training
 The file training_OCR.py is used to train and save the model. The training process involves classifying the input data to the correct class through forward propagation and updating the weights and biases of the network after each epoch through backpropagation.
@@ -54,3 +54,43 @@ Loss
 LossfunctionLossCategoricalCrossEntropy
 Optimizer_Adam
 The trained model is saved as OCR_Model_128,64,64,10.pkl.
+
+## Testing
+The trained model can be used to test the 10,000 test images from the MNIST Dataset. In the file testing_OCR.py, a random batch of 10 examples is tested in series of 5.
+
+## Results
+Loss and Accuracy are tracked at every epoch and plottet for visualisation.
+
+## Perfomance
+Highest achieved Accuracy is 99% at 300th epoch.
+90% Accuracy achieved at 53rd epoch.
+Dependencies
+Numpy
+Matplotlib
+Keras
+How to Run
+To run the code and train the neural network, follow these steps:
+
+## Clone the Repository:
+git clone https://github.com/Adityadikonda10/Neural-Network-from-Scratch-nnfs-
+Install Dependencies:
+pip install numpy
+pip install matplotlib
+pip install keras
+Training the Model:
+python training_OCR.py
+Testing the Model:
+python testing_OCR.py
+Acknowledgements
+This project is primarily based on nnfs by harrison Kinsley at Sentdex's YouTube playlist
+
+## Neural Networks from Scratch.
+Samson Zhang's video on
+
+## Building a neural network FROM SCRATCH
+Andreas Zinonos's video on
+
+Beginner Deep Learning Tutorial | MNIST Digits Classification Neural Network in Python, Keras YouTube video.
+CampusX's video on
+
+Adam Optimizer Explained in detail
