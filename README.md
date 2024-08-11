@@ -24,8 +24,7 @@ Output Layer: 10 neurons gets 64 inputs, with SoftMax activaton function
 ## Emphasis on Adam Optimizier
 The previous optimizer used for the NNFS repository was SGD. The issue with using SGD was the slow learning process and high computational requirements. Switching to Adam (Adaptive Moment Estimation) has made the process faster and lighter in terms of resource consumption. This optimizer operates based on the concept of velocity, adaptively adjusting the step size to find the local minima.
 
-``` \begin{align*}
-\text{Compute the biased first moment estimate } m_{t} \\
+```\begin{align*} \text{Compute the biased first moment estimate } m_{t} \\
 m_{t} &= \beta_{1} \cdot m_{t-1} + (1 - \beta_{1}) \cdot g_{t} \\
 \text{where } g_{t} \text{ is the gradient at time step } t. \\
 \text{Compute the biased second raw moment estimate } v_{t} \\
@@ -36,7 +35,7 @@ v_{t} &= \beta_{2} \cdot v_{t-1} + (1 - \beta_{2}) \cdot g_{t}^{2} \\
 m_{t} &= \beta_{1} \cdot m_{t-1} + (1 - \beta_{1}) \cdot g_{t} \\
 \text{Update the parameters } \theta \\
 \theta_{t} &= \theta_{t-1} - \frac{a \cdot \hat{v}_{t}}{\sqrt{\hat{m}_{t} + \epsilon}}
-\end{align*} ```
+\end{align*}```
 
 ## Training
 The file training_OCR.py is used to train and save the model. The training process involves classifying the input data to the correct class through forward propagation and updating the weights and biases of the network after each epoch through backpropagation.
@@ -94,3 +93,5 @@ Beginner Deep Learning Tutorial | MNIST Digits Classification Neural Network in 
 CampusX's video on
 
 Adam Optimizer Explained in detail
+
+
