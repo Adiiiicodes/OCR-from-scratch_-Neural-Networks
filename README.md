@@ -26,5 +26,5 @@ The previous optimizer used for the NNFS repository was SGD. The issue with usin
 
 ## Special thanks to - 
 
-[Aditya Dikonda] ([https://github.com/Adityadikonda10])
+[Aditya Dikonda] (https://github.com/Adityadikonda10)
 
