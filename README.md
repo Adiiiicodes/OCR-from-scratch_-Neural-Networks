@@ -16,7 +16,7 @@ The neural network architecture used for this project consists of a fully connec
 Input Layer: 128 neurons gets 784 inputs, with ReLU activaton function.
 784 inputs are the vector format of the image. since the image is 28 
 ×
- 28 image.shape() gives (28, 28) pixels in dimentions. when vectorised image.shape() gives (1, 784).
+ 28 image.shape() gives (28, 28) pixels in dimentions. when vectorised image.shape() gives (1, 784)
 Hidden Layer-1: 64 neurons gets 128 inputs, with ReLU activaton function.
 Hidden Layer-2: 64 neurons gets 64 inputs, with ReLU activaton function.
 Output Layer: 10 neurons gets 64 inputs, with SoftMax activaton function
